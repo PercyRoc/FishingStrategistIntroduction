@@ -1,0 +1,26 @@
+{
+  "name": "fishing-strategist-landing",
+  "version": "1.0.0",
+  "description": "垂钓军师 - 介绍页",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "install-deps": "npm install"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32"
+  },
+  "keywords": [
+    "fishing",
+    "landing-page",
+    "tailwind",
+    "vite"
+  ],
+  "author": "垂钓军师团队",
+  "license": "MIT"
+} 
