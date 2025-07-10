@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="h-full scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>垂钓军师 - 告别空军，从拥有一个AI参谋开始</title>
+    <meta name="description" content="垂钓军师 - 融合气象学、大数据与AI模型，为你提供前所未有的出钓决策支持。不仅仅是工具，更是你的爆护搭档。">
+  <link rel="stylesheet" crossorigin href="./assets/style-Ber8vw62.css">
+</head>
+<body class="h-full bg-gray-900 text-white font-sans antialiased">
+    
+    <!-- 英雄区域 (Hero Section) -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- 背景图片 -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80" 
+                 alt="宁静湖面日出" 
+                 class="w-full h-full object-cover">
+            <!-- 渐变蒙层 -->
+            <div class="absolute inset-0 bg-gradient-to-b from-gray-900/70 via-gray-900/60 to-gray-900/80"></div>
+        </div>
+        
+        <!-- 英雄内容 -->
+        <div class="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 text-white drop-shadow-2xl animate-fadeIn">
+                垂钓军师
+            </h1>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-8 text-gray-100 drop-shadow-lg animate-slideUp">
+                告别空军，从拥有一个AI参谋开始。
+            </h2>
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-12 text-gray-200 max-w-4xl mx-auto leading-relaxed drop-shadow-md animate-slideUp">
+                我们不仅仅是天气预报。垂钓军师融合气象学、大数据与AI模型，为你提供前所未有的出钓决策支持。
+            </p>
+            
+            <!-- 向下滚动提示 -->
+            <div class="animate-bounce mt-16">
+                <svg class="w-6 h-6 mx-auto text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- 核心召唤区域 (Call to Action) - 重大修改 -->
+    <section class="py-20 sm:py-24 lg:py-32 bg-gradient-to-br from-gray-800 to-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-12 animate-fadeIn">
+                立即预约，成为首批【爆护体验官】
+            </h2>
+            
+            <!-- 主要召唤 (手机号表单) - 重构为Netlify Forms -->
+            <div class="max-w-md mx-auto mb-8">
+                <form name="contact" method="POST" data-netlify="true" action="/thanks/" class="space-y-6">
+                    <div class="relative">
+                        <input type="tel" 
+                               name="phone"
+                               placeholder="请输入11位手机号码" 
+                               required
+                               pattern="[0-9]{11}"
+                               maxlength="11"
+                               class="w-full px-6 py-4 text-gray-900 bg-white/95 border-2 border-transparent rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-lg font-medium placeholder-gray-500 transition-all duration-300">
+                    </div>
+                    <button type="submit" 
+                            class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg shadow-2xl hover:shadow-blue-500/25 transform hover:scale-[1.02] active:scale-[0.98]">
+                        上线后短信通知我
+                    </button>
+                </form>
+            </div>
+            
+            <!-- 次要召唤 (匿名兴趣) - 重构为Netlify Forms -->
+            <div class="max-w-md mx-auto">
+                <p class="text-gray-400 text-sm mb-3">暂时不想留手机号？</p>
+                <form name="interest" method="POST" data-netlify="true" action="/thanks/">
+                    <input type="hidden" name="interest_click" value="true" />
+                    <button type="submit" 
+                            class="bg-transparent border-2 border-gray-500 hover:border-gray-400 text-gray-300 hover:text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 text-base hover:bg-gray-800/50 transform hover:scale-[1.02] active:scale-[0.98]">
+                        先点个【感兴趣】支持一下！
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 详细功能预览 (Features Deep Dive) -->
+    <section class="py-20 sm:py-24 lg:py-32 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 区域主标题 -->
+            <div class="text-center mb-20">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+                    不仅仅是工具，更是你的爆护搭档
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+            </div>
+            
+            <!-- 功能点 1: 智能环境分析 (左图右文) -->
+            <div class="feature-card mb-32 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="智能环境分析界面" 
+                         class="w-full h-80 object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white mb-6">洞察天时，顺势而为</h3>
+                    <p class="text-lg sm:text-xl text-gray-300 leading-relaxed">
+                        不再只看温度和晴雨。我们为你深度分析<strong class="text-blue-400">气压趋势、风力风向、月相潮汐(Solunar)</strong>等关键环境因素，告诉你最佳的"窗口期"，让你的每一次出击都事半功倍。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 功能点 2: AI预测与推荐引擎 (右图左文) -->
+            <div class="feature-card mb-32 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="order-2 lg:order-2">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="AI预测界面" 
+                         class="w-full h-80 object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="order-1 lg:order-1">
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white mb-6">AI军师，算无遗策</h3>
+                    <p class="text-lg sm:text-xl text-gray-300 leading-relaxed">
+                        这是我们的核心武器。AI引擎会综合所有数据，给出一个直观的<strong class="text-green-400">上鱼指数</strong>。更会根据地点和环境，为你量身推荐<strong class="text-green-400">目标鱼种、最佳饵料配方甚至钓位建议</strong>，让你像大师一样思考。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 功能点 3: 钓场数据库与社区 (左图右文) -->
+            <div class="feature-card mb-32 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="钓场社区界面" 
+                         class="w-full h-80 object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white mb-6">探索秘境，不再孤单</h3>
+                    <p class="text-lg sm:text-xl text-gray-300 leading-relaxed">
+                        内置全国钓场地图，无论是野钓圣地还是高品质黑坑，都一目了然。查看钓友的<strong class="text-purple-400">实时渔获分享和真实评价</strong>，帮你避开"空军基地"。你也可以分享你的战报，成为社区里最靓的仔。
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 功能点 4: 个人钓鱼日志 (右图左文) -->
+            <div class="feature-card mb-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="order-2 lg:order-2">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="个人钓鱼日志界面" 
+                         class="w-full h-80 object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                </div>
+                <div class="order-1 lg:order-1">
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white mb-6">复盘每一次成长</h3>
+                    <p class="text-lg sm:text-xl text-gray-300 leading-relaxed">
+                        轻松记录你的每一次出钓：天气、钓组、饵料、渔获... 系统会自动为你生成数据报告。通过复盘，你会发现属于你自己的<strong class="text-yellow-400">爆护密码</strong>，这比任何大师的经验都更宝贵。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 共创模块 (Co-Creation Module) - 重构为Netlify Forms -->
+    <section class="py-20 sm:py-24 lg:py-32 bg-gradient-to-br from-gray-800 to-gray-900">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 区域主标题 -->
+            <div class="text-center mb-12">
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+                    你希望「垂钓军师」拥有什么"神仙"功能？
+                </h2>
+                <p class="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    你的每一个想法，都可能成为现实。请告诉我们你最期待的功能！
+                </p>
+            </div>
+            
+            <!-- 共创表单 - 重构为Netlify Forms -->
+            <div class="bg-gray-800/50 rounded-2xl p-8 sm:p-10 backdrop-blur-sm border border-gray-700">
+                <form name="suggestions" method="POST" data-netlify="true" action="/thanks/" class="space-y-8">
+                    <!-- 功能投票 (多选框) -->
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-white mb-6">
+                            以下是我们正在构思的一些功能，请勾选你最感兴趣的：
+                        </h3>
+                        <div class="space-y-4">
+                            <label class="flex items-start space-x-3 cursor-pointer group">
+                                <input type="checkbox" 
+                                       name="feature_vote" 
+                                       value="AI钓位风水分析"
+                                       class="mt-1 w-5 h-5 text-blue-600 border-gray-400 rounded focus:ring-blue-500 focus:ring-2 bg-gray-700 border-gray-600">
+                                <span class="text-gray-300 group-hover:text-white transition-colors text-lg">
+                                    AI钓位风水分析 (结合地形、天气推荐具体下竿点)
+                                </span>
+                            </label>
+                            <label class="flex items-start space-x-3 cursor-pointer group">
+                                <input type="checkbox" 
+                                       name="feature_vote" 
+                                       value="装备与饵料的AI搭配顾问"
+                                       class="mt-1 w-5 h-5 text-blue-600 border-gray-400 rounded focus:ring-blue-500 focus:ring-2 bg-gray-700 border-gray-600">
+                                <span class="text-gray-300 group-hover:text-white transition-colors text-lg">
+                                    装备与饵料的AI搭配顾问
+                                </span>
+                            </label>
+                            <label class="flex items-start space-x-3 cursor-pointer group">
+                                <input type="checkbox" 
+                                       name="feature_vote" 
+                                       value="钓友实时对战或PK模式"
+                                       class="mt-1 w-5 h-5 text-blue-600 border-gray-400 rounded focus:ring-blue-500 focus:ring-2 bg-gray-700 border-gray-600">
+                                <span class="text-gray-300 group-hover:text-white transition-colors text-lg">
+                                    钓友实时对战或PK模式
+                                </span>
+                            </label>
+                            <label class="flex items-start space-x-3 cursor-pointer group">
+                                <input type="checkbox" 
+                                       name="feature_vote" 
+                                       value="鱼种识别与尺寸测量工具"
+                                       class="mt-1 w-5 h-5 text-blue-600 border-gray-400 rounded focus:ring-blue-500 focus:ring-2 bg-gray-700 border-gray-600">
+                                <span class="text-gray-300 group-hover:text-white transition-colors text-lg">
+                                    鱼种识别与尺寸测量工具
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- 开放式建议 (文本域) -->
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-semibold text-white mb-4">
+                            或者，你有更好的点子？请在这里畅所欲言：
+                        </h3>
+                        <textarea name="suggestion_text"
+                                  placeholder="例如：我希望能有一个能识别水质的功能..."
+                                  rows="4"
+                                  class="w-full px-4 py-3 text-gray-200 bg-gray-700/50 border border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-base placeholder-gray-400 resize-none"></textarea>
+                    </div>
+                    
+                    <!-- 提交按钮 -->
+                    <button type="submit" 
+                            class="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg shadow-2xl hover:shadow-green-500/25 transform hover:scale-[1.02] active:scale-[0.98]">
+                        提交我的奇思妙想
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 (Footer) -->
+    <footer class="bg-gray-950 border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <p class="text-gray-500 text-sm sm:text-base">
+                    © 2025 垂钓军师. Let's build it together.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
