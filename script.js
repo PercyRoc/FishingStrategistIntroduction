@@ -36,7 +36,7 @@ async function handleSubmit(event) {
         
         if (response.ok) {
             // 请求成功，跳转到感谢页面
-            window.location.href = '/thanks/';
+            window.location.href = '/thanks.html';
         } else {
             // 请求失败，在控制台打印错误
             console.error('表单提交失败:', response.status, response.statusText);
