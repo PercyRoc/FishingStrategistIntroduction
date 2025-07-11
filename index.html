@@ -52,7 +52,7 @@
             
             <!-- 主要召唤 (手机号表单) -->
             <div class="max-w-md mx-auto mb-8">
-                <form id="contact-form" name="contact" class="space-y-6">
+                <form id="contact-form" name="contact" class="space-y-6" data-netlify="true" action="/thanks.html">
                     <div class="relative">
                         <input type="tel" 
                                name="phone"
@@ -72,7 +72,7 @@
             <!-- 次要召唤 (匿名兴趣) -->
             <div class="max-w-md mx-auto">
                 <p class="text-gray-400 text-sm mb-3">暂时不想留手机号？</p>
-                <form id="interest-form" name="interest">
+                <form id="interest-form" name="interest" data-netlify="true" action="/thanks.html">
                     <input type="hidden" name="interest_click" value="true" />
                     <button type="submit" 
                             class="bg-transparent border-2 border-gray-500 hover:border-gray-400 text-gray-300 hover:text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 text-base hover:bg-gray-800/50 transform hover:scale-[1.02] active:scale-[0.98]">
@@ -171,7 +171,7 @@
             
             <!-- 共创表单 -->
             <div class="bg-gray-800/50 rounded-2xl p-8 sm:p-10 backdrop-blur-sm border border-gray-700">
-                <form id="suggestions-form" name="suggestions" class="space-y-8">
+                <form id="suggestions-form" name="suggestions" class="space-y-8" data-netlify="true" action="/thanks.html">
                     <!-- 功能投票 (多选框) -->
                     <div>
                         <h3 class="text-xl sm:text-2xl font-semibold text-white mb-6">
