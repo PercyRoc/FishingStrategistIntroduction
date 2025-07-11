@@ -9,6 +9,23 @@
 </head>
 <body class="h-full bg-gray-900 text-white font-sans antialiased">
     
+    <!-- Netlify Form Discovery Helper -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="tel" name="phone" />
+      <input type="text" name="bot-field" />
+    </form>
+
+    <form name="interest" netlify netlify-honeypot="bot-field" hidden>
+        <input type="hidden" name="interest_click" value="true" />
+    </form>
+
+    <form name="suggestions" netlify netlify-honeypot="bot-field" hidden>
+        <input type="checkbox" name="feature_vote" />
+        <textarea name="suggestion_text"></textarea>
+    </form>
+
+    <!-- Your existing visible content starts here... -->
+    
     <!-- 英雄区域 (Hero Section) -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <!-- 背景图片 -->
