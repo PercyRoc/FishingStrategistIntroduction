@@ -14,8 +14,58 @@ const COCREATION_FORMSPREE_URL = 'https://formspree.io/f/YOUR_COCREATION_FORM_ID
 // 手机号码验证正则表达式（中国大陆11位手机号）
 const phoneRegex = /^1[3-9]\d{9}$/;
 
-// 页面加载完成后的初始化
+// 表单处理函数
+async function handleSubmit(event) {
+    event.preventDefault();
+    
+    const form = event.target;
+    const formData = new FormData(form);
+    
+    // 将表单数据编码为URL-safe格式
+    const urlEncodedData = new URLSearchParams(formData).toString();
+    
+    try {
+        // 发送POST请求
+        const response = await fetch('/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: urlEncodedData
+        });
+        
+        if (response.ok) {
+            // 请求成功，跳转到感谢页面
+            window.location.href = '/thanks/';
+        } else {
+            // 请求失败，在控制台打印错误
+            console.error('表单提交失败:', response.status, response.statusText);
+        }
+    } catch (error) {
+        // 网络错误或其他异常
+        console.error('表单提交出错:', error);
+    }
+}
+
+// 页面加载完成后添加事件监听器
 document.addEventListener('DOMContentLoaded', function() {
+    // 为三个表单添加提交事件监听器
+    const contactForm = document.getElementById('contact-form');
+    const interestForm = document.getElementById('interest-form');
+    const suggestionsForm = document.getElementById('suggestions-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleSubmit);
+    }
+    
+    if (interestForm) {
+        interestForm.addEventListener('submit', handleSubmit);
+    }
+    
+    if (suggestionsForm) {
+        suggestionsForm.addEventListener('submit', handleSubmit);
+    }
+    
     // 初始化滚动动效观察器
     initScrollAnimations();
     
@@ -202,37 +252,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         button.addEventListener('mouseup', function() {
-            this.style.transform = '';
+            this.style.transform = 'scale(1)';
         });
         
         button.addEventListener('mouseleave', function() {
-            this.style.transform = '';
+            this.style.transform = 'scale(1)';
         });
     });
     
-    // 为表单添加提交时的视觉反馈
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-        form.addEventListener('submit', function() {
-            const submitButton = this.querySelector('button[type="submit"]');
-            if (submitButton) {
-                submitButton.textContent = '提交中...';
-                submitButton.disabled = true;
-                
-                // 添加加载动画
-                setTimeout(() => {
-                    submitButton.innerHTML = '✓ 已提交';
-                    submitButton.style.backgroundColor = '#10b981';
-                }, 500);
+    // 为复选框添加自定义样式
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                this.parentElement.style.color = '#3b82f6'; // 蓝色
+            } else {
+                this.parentElement.style.color = '#9ca3af'; // 灰色
             }
         });
     });
-    
-    // 添加页面加载完成的淡入效果
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease-in';
-    
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
 }); 
